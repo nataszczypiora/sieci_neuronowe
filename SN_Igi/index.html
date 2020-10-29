@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>Zadanie 1</title>
+</head>
+<body>
+    <div id="mainContainer">
+        <div id="header">
+            <p>Sieci neuronowe</p>
+        </div>
+        <div id="body">
+            <div id="task1Board">
+                <div id="leftPane">
+
+                </div>
+                <div id="rightPane">
+                    <div id="buttonsPane">
+                        <select name="Rozmiar planszy: " id="gridSize" onchange="gridSizeChanged()">
+                            <option value="1">5x5</option>
+                            <option value="2">6x6</option>
+                            <option value="3">7x7</option>
+                            <option value="4">8x8</option>
+                            <option value="5">9x9</option>
+                            <option value="6">10x10</option>
+                        </select>
+                        <button class="btn btn-light" id="rev">Reverse</button>
+                        <button class="btn btn-light" id="recognise" onclick="recogniseDigit()">Recognise Digit</button>
+                        <div id="digits">
+                            <button class="btn btn-light" id="one" onclick="printDefaultDigit(1)">1</button>
+                            <button class="btn btn-light" id="two" onclick="printDefaultDigit(2)">2</button>
+                            <button class="btn btn-light" id="three" onclick="printDefaultDigit(3)">3</button>
+                            <button class="btn btn-light" id="four" onclick="printDefaultDigit(4)">4</button>
+                            <button class="btn btn-light" id="fife" onclick="printDefaultDigit(5)">5</button>
+                            <button class="btn btn-light" id="six" onclick="printDefaultDigit(6)">6</button>
+                            <button class="btn btn-light" id="seven" onclick="printDefaultDigit(7)">7</button>
+                            <button class="btn btn-light" id="eight" onclick="printDefaultDigit(8)">8</button>
+                            <button class="btn btn-light" id="nine" onclick="printDefaultDigit(9)">9</button>
+                            <button class="btn btn-light" onclick="clearGrid()">Clear</button>
+                            <button class="btn btn-light" id="zero" onclick="printDefaultDigit(0)">0</button>
+                            <button class="btn btn-light" onclick="randGrid()">Rand</button>
+                        </div>
+
+                    </div>
+                    <div id="consolePane">
+                        <textarea class="form-control" id="outputConsole" rows="13" readonly></textarea>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div id="footer">
+            Tu stopka
+        </div>
+    </div>
+    <script type="text/javascript" src="index.js">
+    </script>
+</body>
+</html>
