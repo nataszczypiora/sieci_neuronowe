@@ -24,9 +24,9 @@
                             <option value="3">7x7</option>
                             <option value="4">8x8</option>
                             <option value="5">9x9</option>
-                            <option value="6">10x10</option>
+                            <option SELECTED value="6">10x10</option>
                         </select>
-                        <button class="btn btn-light" id="rev">Reverse</button>
+                        <button class="btn btn-light" id="rev" onclick="reverse()">Reverse</button>
                         <button class="btn btn-light" id="recognise" onclick="recogniseDigit()">Recognise Digit</button>
                         <div id="digits">
                             <button class="btn btn-light" id="one" onclick="printDefaultDigit(1)">1</button>
@@ -42,7 +42,13 @@
                             <button class="btn btn-light" id="zero" onclick="printDefaultDigit(0)">0</button>
                             <button class="btn btn-light" onclick="randGrid()">Rand</button>
                         </div>
-
+                        <div id = "moving">
+                            <button class="btn btn-light" id="left" onclick="toLeft()">&larr;</button>
+                            <button class="btn btn-light" id="up" onclick="toUp()">&uarr;</button>
+                            <button class="btn btn-light" id="right" onclick="toRight()">&rarr;</button>
+                            <button class="btn btn-light" id="down" onclick="toDown()">&darr;</button>
+                            <button class="btn btn-light" id="wypisz" onclick="saveDigit()">Wypisz</button>
+                        </div>
                     </div>
                     <div id="consolePane">
                         <textarea class="form-control" id="outputConsole" rows="13" readonly></textarea>
