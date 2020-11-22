@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="86a744c0-6191-4a10-afaf-4dae95b96d42" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="CSS File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1ieUGVbLQJTvg2bRNsQsbFSJB1u" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RunManager" selected="JavaScript Debug.index.html (2)">
+    <configuration name="index.html (1)" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/SN_Igi/index.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="index.html (2)" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/index.js/index.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/folder bez nazwy/index.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="index.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/index.js" working-dir="$PROJECT_DIR$">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.index.html (2)" />
+        <item itemvalue="Node.js.index.js" />
+        <item itemvalue="JavaScript Debug.index.html (1)" />
+        <item itemvalue="JavaScript Debug.index.html" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="86a744c0-6191-4a10-afaf-4dae95b96d42" name="Default Changelist" comment="" />
+      <created>1602267456706</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1602267456706</updated>
+      <workItem from="1602267458261" duration="9905000" />
+      <workItem from="1602586603094" duration="2176000" />
+      <workItem from="1602614728287" duration="598000" />
+      <workItem from="1602771704271" duration="4428000" />
+      <workItem from="1602788955249" duration="126000" />
+      <workItem from="1602789416687" duration="380000" />
+      <workItem from="1603206064417" duration="2277000" />
+      <workItem from="1603389473124" duration="4122000" />
+      <workItem from="1603399726556" duration="255000" />
+      <workItem from="1603655252226" duration="25000" />
+      <workItem from="1603892712004" duration="7578000" />
+      <workItem from="1603979210492" duration="1750000" />
+      <workItem from="1604499611137" duration="2966000" />
+      <workItem from="1604511520250" duration="3674000" />
+      <workItem from="1604589104281" duration="1986000" />
+      <workItem from="1604606130063" duration="96000" />
+      <workItem from="1604664272638" duration="176000" />
+      <workItem from="1605803733249" duration="10463000" />
+      <workItem from="1606053286432" duration="5026000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1419" height="245" key="GridCell.Tab.0.bottom" timestamp="1605806671646">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1419" height="245" key="GridCell.Tab.0.bottom/0.0.1440.900/1440.0.1180.820@0.0.1440.900" timestamp="1605806671646" />
+    <state width="1419" height="245" key="GridCell.Tab.0.center" timestamp="1605806671641">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1419" height="245" key="GridCell.Tab.0.center/0.0.1440.900/1440.0.1180.820@0.0.1440.900" timestamp="1605806671641" />
+    <state width="1419" height="245" key="GridCell.Tab.0.left" timestamp="1605806671635">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1419" height="245" key="GridCell.Tab.0.left/0.0.1440.900/1440.0.1180.820@0.0.1440.900" timestamp="1605806671635" />
+    <state width="1419" height="245" key="GridCell.Tab.0.right" timestamp="1605806671643">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1419" height="245" key="GridCell.Tab.0.right/0.0.1440.900/1440.0.1180.820@0.0.1440.900" timestamp="1605806671643" />
+    <state x="421" y="99" width="598" height="668" key="find.popup" timestamp="1605985402377">
+      <screen x="0" y="25" width="1440" height="817" />
+    </state>
+    <state x="421" y="82" width="598" height="735" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1603905898381" />
+    <state x="421" y="99" width="598" height="668" key="find.popup/0.25.1440.817@0.25.1440.817" timestamp="1605985402377" />
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1605808000090">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900/1440.0.1180.820@0.0.1440.900" timestamp="1605808000090" />
+    <state x="385" y="196" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1603893526903" />
+  </component>
+</project>
