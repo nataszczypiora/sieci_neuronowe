@@ -5,6 +5,7 @@ var console = document.getElementById("outputConsole")
 let n = 0.2137
 let xMin = 0.0
 let xMax = 1.0
+let chartData = [[], [], [], [], [], [], [], [], [], []]
 
 let digits = [
     [
@@ -87,7 +88,7 @@ let digits = [
 ]
 let furierSize = [32, 64, 64, 64, 128, 128]
 
-function normalize(x) {
+function normalize(x) { // <- Tutaj mamy normalizację
     return parseFloat((x - xMin) / (xMax - xMin))
 }
 
@@ -170,14 +171,22 @@ var perceptron = function (digit, b = 0) {
         for (var i = 0; i <= currentSize * currentSize + furierSize[currentSize - 5]; i++) {
             this.weights[i] = Math.random()
         }
-        for (var k = 0; k < 420; k++) {
+        for (var k = 0; k < 1000; k++) {
             var random = parseInt(Math.random() * 10)
-            var exVal = random == digit ? 1 : 0
+            var exVal = random == digit ? 1 : -1
             var exTab = addFourierTransform(digits[random][currentSize - 5])
-            var ERROR = exVal - (this.countValue(digits[random][currentSize - 5]) < this.teta ? 0 : 1) // <- Tu też mam funkcję progową, ale nie ogarnęłam wcześniej
+            var ERROR = exVal - (this.countValue(digits[random][currentSize - 5]) < this.teta ? -1 : 1) // <- Tu też mam funkcję progową, ale nie ogarnęłam wcześniej
+            if (exVal == 1) { // TUTAJ MAMY FUNKCJE BŁĘDU
+                linearError = this.teta - this.countValue(digits[random][currentSize - 5])
+            } else {
+                linearError = this.countValue(digits[random][currentSize - 5]) - this.teta
+            }
+            if (linearError < 0) linearError = 0;
+            chartData[digit].push(linearError)
             if (ERROR != 0) {
                 for (var i = 0; i < currentSize * currentSize + furierSize[currentSize - 5]; i++) {
                     this.weights[i] = this.weights[i] + n * ERROR * exTab[i]
+                    this.weights[i] = normalize(this.weights[i]) //normalizacja wag
                 }
                 this.weights[currentSize * currentSize + furierSize[currentSize - 5]] += n * ERROR * this.bias
                 this.teta = this.teta - n * ERROR
@@ -236,7 +245,6 @@ function createGrid(size) {
         perceptrons[i] = new perceptron(i)
         perceptrons[i].perceptronLearning()
     }
-    console.textContent += "Perceptrony zostaly nauczone\n"
 }
 
 function clearGrid() {
@@ -426,3 +434,34 @@ function toUp() {
     }
 }
 
+google.charts.load('current', {'packages': ['corechart']});
+google.charts.setOnLoadCallback(drawChart);
+
+function drawChart() {
+    var data = new google.visualization.DataTable();
+    data.addColumn('number', 'Iteration');
+    for (i = 0; i < 10; i++) {
+        data.addColumn('number', i)
+    }
+
+    for (i = 0; i < 1000; i++)
+        data.addRow([
+            i,
+            chartData[0][i],
+            chartData[1][i],
+            chartData[2][i],
+            chartData[3][i],
+            chartData[4][i],
+            chartData[5][i],
+            chartData[6][i],
+            chartData[7][i],
+            chartData[8][i],
+            chartData[9][i]]);
+
+    // Create and draw the visualization.
+    new google.visualization.LineChart(document.getElementById('curve_chart')).draw(data, {});
+}
+
+function hideGraph() {
+    document.getElementById("curve_chart").hidden = true
+}

@@ -1,6 +1,8 @@
 body{
     margin: 0;
     padding: 0;
+    margin-left: 0px;
+    margin-right: 0px;
 }
 
 #header{
@@ -8,8 +10,8 @@ body{
     height: 100px;
     background: bisque;
     margin-top: 40px;
-    margin-left: 40px;
-    margin-right: 40px;
+    margin-left: 0px;
+    margin-right: 0px;
 }
 
 #header p{
@@ -24,18 +26,18 @@ body{
 }
 
 #body{
-    width: auto;
+    width: 100%;
     height: auto;
     background: beige;
-    margin-left: 40px;
-    margin-right: 40px;
+    margin-left: 0px;
+    margin-right: 0px;
     padding: 10px;
 }
 
 #task1Board{
     alignment: center;
-    margin-left: 40px;
-    margin-right: 40px;
+    margin-left: 0px;
+    margin-right: 0px;
 }
 
 #task1Board div{

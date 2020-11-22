@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <title>Zadanie 1</title>
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
 </head>
 <body>
     <div id="mainContainer">
@@ -28,6 +29,8 @@
                         </select>
                         <button class="btn btn-light" id="rev" onclick="reverse()">Reverse</button>
                         <button class="btn btn-light" id="recognise" onclick="recogniseDigit()">Recognise Digit</button>
+<!--                        <input type="number" id="fname" name="fname" id="bias" placeholder="Bias, domyslnie 0">-->
+<!--                        <button class="btn btn-light" id="addBias" onclick="changeBias()">Ok</button>-->
                         <div id="digits">
                             <button class="btn btn-light" id="one" onclick="printDefaultDigit(1)">1</button>
                             <button class="btn btn-light" id="two" onclick="printDefaultDigit(2)">2</button>
@@ -54,7 +57,7 @@
                         <textarea class="form-control" id="outputConsole" rows="13" readonly></textarea>
                     </div>
                 </div>
-
+                <div id="curve_chart" style="width: 900px; height: 500px" onclick="hideGraph()"></div>
             </div>
         </div>
         <div id="footer">
