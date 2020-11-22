@@ -151,6 +151,9 @@ var perceptron = function (digit, b = 0) {
     this.digit = digit
     this.bias = b  // Dodaje bias, jeżeli w konstruktosze przekaże się jakąś wartość
     this.weights = new Array(currentSize * currentSize + furierSize[currentSize - 5])
+    this.bestWeights = new Array(currentSize * currentSize + furierSize[currentSize - 5])
+    this.bestAcceptedCases = 0
+
     this.teta = Math.random()
 
     this.getTheta = function () {
@@ -167,9 +170,36 @@ var perceptron = function (digit, b = 0) {
         return parseFloat(result)
     }
 
+    this.countBestValue = function (input) {
+        var digitTable = addFourierTransform(input)
+        var result = 0.0
+        for (var i = 0; i < currentSize * currentSize + furierSize[currentSize - 5]; i++) {
+            result += parseFloat(digitTable[i] * this.bestWeights[i])
+        }
+        result += this.bias * this.bestWeights[currentSize * currentSize + furierSize[currentSize - 5]]
+        return parseFloat(result)
+    }
+
+    this.howManyExamplesAccepted = function() {
+        var sum = 0
+        for(var i = 0; i < 10; i++)
+        {
+            var value = this.countValue(digits[i][currentSize - 5]) < this.teta ? -1 : 1
+            if(i == this.digit && value == 1)
+            {
+                sum += 1
+            }else if(i != this.digit && value == -1)
+            {
+                sum += 1
+            }
+        }
+        return sum;
+    }
+
     this.perceptronLearning = function () {
         for (var i = 0; i <= currentSize * currentSize + furierSize[currentSize - 5]; i++) {
             this.weights[i] = Math.random()
+            this.bestWeights[i] = this.weights[i]
         }
         for (var k = 0; k < 1000; k++) {
             var random = parseInt(Math.random() * 10)
@@ -190,6 +220,11 @@ var perceptron = function (digit, b = 0) {
                 }
                 this.weights[currentSize * currentSize + furierSize[currentSize - 5]] += n * ERROR * this.bias
                 this.teta = this.teta - n * ERROR
+                if(this.howManyExamplesAccepted() > this.bestAcceptedCases)
+                {
+                    this.bestWeights = this.weights
+                    this.bestAcceptedCases = this.howManyExamplesAccepted()
+                }
             }
         }
 
@@ -328,7 +363,7 @@ function recogniseDigit() {
         }
     }
     for (var i = 0; i < 10; i++) {
-        if (perceptrons[i].countValue(input) < perceptrons[i].getTheta()) { // <- O tu jest funkcja aktywacji PROGOWA
+        if (perceptrons[i].countBestValue(input) < perceptrons[i].getTheta()) { // <- O tu jest funkcja aktywacji PROGOWA
             console.textContent += "Perceptron " + i + " NIE ROZPOZNAŁ cyfry\n"
         } else {
             console.textContent += "Perceptron " + i + " ROZPOZNAŁ cyfrę\n"
